@@ -1,8 +1,8 @@
 {
-  "name": "Valine-Admin",
+  "name": "valine-admin-server",
   "version": "1.0.0",
   "private": true,
-  "description": "A sample Node.js app using Express",
+  "description": "A simple comment system based on LeanCloud and Valine.",
   "main": "server.js",
   "scripts": {
     "test": "lean up",
