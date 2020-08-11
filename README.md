@@ -4,6 +4,8 @@
 
 本项目基于 @lete114/Valine-Admin-Server.
 
+Demo Site: [Serok's Blog](https://snow.js.org)
+
 ## 简介
 
 此项目是一个对 [Valine](https://valine.js.org) 评论系统的拓展应用，可增强 `Valine` 的邮件通知功能。基于 Leancloud 的云引擎与云函数。可以提供邮件 `通知站长` 和 `@ 通知` 的功能，而且还支持自定义邮件通知模板。
@@ -56,3 +58,7 @@
 <img width="500" src="https://cdn.jun6.net/201807081507_968.png"/>
 
 > **注: 更新新版本与更改环境变量均需要重启容器后生效。**
+
+## License
+
+LGPL-3.0
