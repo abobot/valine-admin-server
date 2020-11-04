@@ -118,7 +118,7 @@ li {
 }
 
 .vhead {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.24rem; /*0.5rem;*/
 }
 
 .vhead a,
@@ -156,7 +156,8 @@ li {
 
 .vcard {
   border-radius: 25px;
-  border: 2px solid #b5b5b5;
+  /*border: 2px solid #b5b5b5;*/
+  border-bottom: 2px dotted #b6b6b6;
   padding: 20px;
 }
 
@@ -169,7 +170,7 @@ li {
 }
 
 .check {
-  padding-top: 1rem;
+  padding-top: 0.2rem; /*1rem;*/
   color: #33b1ff;
 }
 

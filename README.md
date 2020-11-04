@@ -2,7 +2,7 @@
 
 ## 写在前面
 
-本项目基于 @lete114/Valine-Admin-Server.
+本项目基于 @lete114/Valine-Admin-Server，修改了样式，更加简洁清晰。
 
 Demo Site: [Serok's Blog](https://snow.js.org)
 
