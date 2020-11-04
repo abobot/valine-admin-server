@@ -155,7 +155,7 @@ li {
 }
 
 .vcard {
-  border-radius: 25px;
+  border-radius: 2px; /*25px;*/
   /*border: 2px solid #b5b5b5;*/
   border-bottom: 2px dotted #b6b6b6;
   padding: 20px;
