@@ -60,7 +60,7 @@ exports.notice = (comment) => {
 
   if (!process.env.DISABLE_EMAIL) {
     const emailSubject =
-      "「" + process.env.SITE_NAME + "」上有人回复了你啦！";
+      "『" + process.env.SITE_NAME + "』上有人回复你啦！";
     const emailContent = noticeTemplate({
       siteName: process.env.SITE_NAME,
       siteUrl: process.env.SITE_URL,
