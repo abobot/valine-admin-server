@@ -155,7 +155,7 @@ function gethttp(url) {
 }
 
 //获取token
-var gettoken = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=" + process.env.WE_ID + "&corpsecret=" + process.env.APP_SECRET;
+var gettoken = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=" + process.env.WX_ID + "&corpsecret=" + process.env.APP_SECRET;
 var ACCESS_TOKEN = JSON.parse(gethttp(gettoken))["access_token"];
 console.log("ACCESS_TOKEN",ACCESS_TOKEN);
 // const scContent = 
