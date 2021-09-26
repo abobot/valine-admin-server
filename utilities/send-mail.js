@@ -123,6 +123,67 @@ exports.notice = (comment) => {
         console.warn("微信提醒失败:", error.message);
       });
   }
+  
+  //企业微信提醒
+//   var WE_ID = "11111";
+// var APP_ID = "1111";
+// var APP_SECRET = "1235Oo";
+
+///定义post方法
+function posthttp(url, data) {
+    var xhr = new XMLHttpRequest();
+ xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+            //flash(this.responseText); //显示返回消息,可删除本行
+        }
+    });
+    xhr.open("POST", url, false);
+    xhr.send(data);
+    return xhr.responseText;
+}
+
+//定义get方法
+function gethttp(url) {
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+           // flash(this.responseText); //显示返回消息,可删除本行
+        }
+    });
+    xhr.open("GET", url, false);
+    xhr.send();
+    return xhr.responseText;
+}
+
+//获取token
+var gettoken = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=" + process.env.WE_ID + "&corpsecret=" + process.env.APP_SECRET;
+var ACCESS_TOKEN = gethttp(gettoken).access_token;
+// const scContent =
+//     "#### 评论内容" +
+//     "\r\n > " +
+//     comment.get("comment") +
+//     "\r\n" +
+//     "原文地址 👉 " +
+//     process.env.SITE_URL +
+//     comment.get("url") +
+//     "\r\n #### 评论人\r\n" +
+//     comment.get("nick") +
+//     "(" +
+//     comment.get("mail") +
+//     ")";
+    var message = JSON.stringify({
+        "touser": "@all",
+        "msgtype": "text",
+        "agentid": process.env.APP_ID,
+        "text": {
+            "content": scContent
+        },
+        "safe": 0
+    });
+    var send = "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=" + ACCESS_TOKEN;
+    posthttp(send, message);
+
+  
   // QQ提醒
   if (process.env.QMSG_KEY != null) {
     if (process.env.QQ_SHAKE != null) {
