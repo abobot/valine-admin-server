@@ -146,7 +146,7 @@ function gethttp(url) {
   var xhr = new XMLHttpRequest();
   xhr.addEventListener("readystatechange", function () {
       if (this.readyState === 4) {
-         // flash(this.responseText); //显示返回消息,可删除本行
+         console.log(this.responseText); //显示返回消息,可删除本行
       }
   });
   xhr.open("GET", url, false);
