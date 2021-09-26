@@ -157,7 +157,7 @@ function gethttp(url) {
 //获取token
 var gettoken = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=" + process.env.WE_ID + "&corpsecret=" + process.env.APP_SECRET;
 var ACCESS_TOKEN = JSON.parse(gethttp(gettoken))["access_token"];
-console.log(ACCESS_TOKEN);
+console.log("ACCESS_TOKEN",ACCESS_TOKEN);
 // const scContent = 
 // "123456";
   // "#### 评论内容" +
@@ -184,6 +184,7 @@ var message = JSON.stringify({
   var send = "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=" + ACCESS_TOKEN;
   // console.log(send);
   // console.log(message);
+  console.log("开始给微信发消息");
   posthttp(send, message);
   
   
